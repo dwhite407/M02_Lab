@@ -19,7 +19,7 @@ def main():
         if (student_Lname.upper() == "ZZZ"):
             break
 
-        student_Fname = str(input("What is the student's First name? "))
+        student_Fname = str(input("What is the student's First name? ")) #This gets the student's first name
 
         #This try...except will check if the user input for their GPA is a number, and continue to the next if invalid
         try:
