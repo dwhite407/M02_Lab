@@ -12,12 +12,14 @@ their GPA.
 
 def main():
     while True:
-        student_name = input("What is the students last name? ") #This takes the user input for the student's last name
+        student_Lname = str(input("What is the students last name? ")) #This takes the user input for the student's last name
 
         #This breaks the while loop when the user inputs "zzz" or "ZZZ", using the .upper functino to make sure
         #the uppercase and lowercase zzz closes the program
-        if (student_name.upper() == "ZZZ"):
+        if (student_Lname.upper() == "ZZZ"):
             break
+
+        student_Fname = str(input("What is the student's First name? "))
 
         #This try...except will check if the user input for their GPA is a number, and continue to the next if invalid
         try:
@@ -28,10 +30,10 @@ def main():
         
         #This if...elif...else determines if the student made the Honor Roll or Dean's List
         if (student_gpa >= 3.5):
-            print(f"{student_name} has made the Dean's List with a GPA of: {student_gpa}")
+            print(f"{student_Fname.capitalize()} {student_Lname.capitalize()} has made the Dean's List with a GPA of: {student_gpa}")
         elif (student_gpa >= 3.25 and student_gpa < 3.5):
-            print(f"{student_name} has made the Honor Roll with a GPA of: {student_gpa}")
+            print(f"{student_Fname.capitalize()} {student_Lname.capitalize()} has made the Honor Roll with a GPA of: {student_gpa}")
         else: 
-            print(f"{student_name} did not make the Dean's List or Honor Roll with a GPA of: {student_gpa}")
+            print(f"{student_Fname.capitalize()} {student_Lname.capitalize()} did not make the Dean's List or Honor Roll with a GPA of: {student_gpa}")
         
 main()
